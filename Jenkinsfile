@@ -2,15 +2,15 @@
 pipeline {
 agent any
 
-stages (List files){
-  steps {
+stages {
+  steps (List files) {
     sh 'pwd'
     sh 'ls -ltr'
   }
 }
   
-stages (Terraform ){
-  steps {
+stages {
+  steps (Terraform ) {
     sh 'terraform destroy -auto-approve'
     sh 'terraform init'
     sh 'terraform plan'
