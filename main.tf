@@ -95,7 +95,7 @@ resource "aws_instance" "bishalhttp-srv01" {
             sudo yum install -y httpd
             sudo systemctl start httpd
             sudo systemctl enable httpd
-            sudo echo "<h1>Welcome to my site</h1>" > /var/www/html/index.html
+            sudo echo "<h1>Welcome to Bishal-site</h1>" > /var/www/html/index.html
 EOF
 tags = {
     Name = "bishalhttp-srv01"
